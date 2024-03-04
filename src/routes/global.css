@@ -1,0 +1,39 @@
+/* ============================================== Imports ============================================== */
+/* ======================= Fonts ======================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ======================= Tailwind ======================= */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* ============================================== Styling ============================================== */
+/* ======================= Global ======================= */
+:global(*) {
+    font-family: "Raleway", sans-serif;
+}
+:global(body) {
+    margin: 0;
+    padding: 0;
+}
+:global(body::-webkit-scrollbar){
+    width: 0px;
+}
+.number{
+    font-family: "Montserrat", sans-serif;
+}
+.scroll-down{
+    animation: scrollDown 1.5s ease-in-out infinite;
+}
+@keyframes scrollDown {
+    0%{
+        transform: translateY(-3rem);
+    }
+    40%,60%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(3rem);
+    }
+}
