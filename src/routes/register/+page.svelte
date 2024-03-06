@@ -1,25 +1,29 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
-  import { supabase } from '../../lib/supabaseClient'; // Import the initialized Supabase client
+    import supabase from "$lib/supabase";
+    import { onMount } from "svelte";
 
-  let productNames: string[] = []; // Initialize an empty array to store product names
-
-  // Fetch product names from the database
-  async function fetchProductNames() {
-    try {
-      const data data: any[] = await supabase
-        .from('tbl_product')
-        .select('product_name'); // Replace 'product_name' with the actual column name
-
-	productNames = data.map((row) => row.product_name);
+    interface Product {
+        // Add properties based on your actual data structure
+        product_name: string;
+        // Add other properties as needed
     }
-  }
 
-  onMount(fetchProductNames); // Fetch product names when the component mounts
+    let products: Product[] = [];
+
+    onMount(async () => {
+        let { data, error } = await supabase.from('tbl_product').select('*');
+        if (data) {
+            products = data;
+        }
+    });
 </script>
 
-<ul>
-  {#each productNames as productName}
-    <li>{productName}</li>
-  {/each}
-</ul>
+<h1>Working</h1>
+
+{#each products as product}
+    <div>
+        <input type="text" bind:value={product.product_name}>
+    </div>
+{:else}
+    <p>No products found</p>
+{/each}

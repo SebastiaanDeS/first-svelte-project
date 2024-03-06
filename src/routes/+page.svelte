@@ -2,6 +2,7 @@
     // ============================================== Imports  ============================================== 
     // ======================= Components ======================= 
     import Header from '../components/Header.svelte';
+    
     // ======================= Images ======================= 
     import heroImg from '../img/wavesBg.png';
     import productImg from '../img/Boba_Coffie.png';
@@ -13,7 +14,7 @@
     <section class="min-h-dvh w-full flex justify-center items-center relative">
         <h1 class="uppercase font-black text-9xl tracking-wide z-10 text-white">Bubbley</h1>
         <img class="absolute w-full h-full object-cover" src="{heroImg}" alt="">
-        <a class="z-10 text-white absolute bottom-0 m-7 lowercase text-xl animate-pulse" href="/products">Explore more</a>
+        <a class="z-10 text-white absolute bottom-0 m-7 lowercase text-xl animate-pulse" href="./register">Explore more</a>
 
         <div class="flex justify-center items-center opacity-70 overflow-hidden text-white py-3 px-2 absolute bottom-0 right-0 m-5 border-white border-2 rounded-xl">
             <i class="translate-y-12 fa-solid fa-arrow-down-long text-base scroll-down"></i>
