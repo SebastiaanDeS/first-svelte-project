@@ -3,9 +3,9 @@
 
     <nav>
         <ul class="flex items-center gap-6">
-            <li><a class="text-lg text-white uppercase font-bold tracking-wide opacity-60 ease-in-out duration-300 hover:opacity-100" href="#">Home</a></li>
-            <li><a class="text-lg text-white uppercase font-bold tracking-wide opacity-60 ease-in-out duration-300 hover:opacity-100" href="#">products</a></li>
-            <li><a class="text-lg text-white uppercase font-bold tracking-wide opacity-60 ease-in-out duration-300 hover:opacity-100" href="#">contact</a></li>
+            <li><a class="text-lg text-white uppercase font-bold tracking-wide opacity-60 ease-in-out duration-300 hover:opacity-100" href="../../routes">Home</a></li>
+            <li><a class="text-lg text-white uppercase font-bold tracking-wide opacity-60 ease-in-out duration-300 hover:opacity-100" href="../product">products</a></li>
+            <li><a class="text-lg text-white uppercase font-bold tracking-wide opacity-60 ease-in-out duration-300 hover:opacity-100" href="../contact">contact</a></li>
             <li><a class="text-lg text-white uppercase font-bold tracking-wide opacity-60 ease-in-out duration-300 hover:opacity-100" href="#"><i class="fa-solid fa-user"></i></a></li>
             <li><a class="text-lg text-white uppercase font-bold tracking-wide opacity-60 ease-in-out duration-300 hover:opacity-100" href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
         </ul>
