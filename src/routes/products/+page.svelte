@@ -22,10 +22,16 @@
                     <!-- Access pt_price from the first object in tbl_product_type array -->
                     {#if product.tbl_product_type}
                         <p class="number text-lg">€ {product.tbl_product_type[0].pt_price}</p>
+                        {#if product.tbl_product_type[0].tbl_type}
+                            <p class="text-lg">{product.tbl_product_type[0].tbl_type.type}</p>
+                        {/if}
                     {/if}
 
-                    <!-- <pre>{JSON.stringify(product, null, 2)}</pre> -->
+
                     <button class="bg-pink-400 mt-2 text-white py-3 px-10 tracking-wider border-2 border-pink-400 uppercase rounded-lg font-bold text-sm hover:bg-white hover:text-pink-400 ease-in-out duration-300">shopping cart</button>
+                </div>
+                <div class="p-10 bg-white rounded-xl">
+                    <pre>{JSON.stringify(product, null, 2)}</pre>
                 </div>
             {/each}
                 
