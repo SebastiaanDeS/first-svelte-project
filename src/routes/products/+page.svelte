@@ -16,17 +16,18 @@
         <article class="flex flex-wrap justify-center align-middle gap-14">
             {#each data.products as product}
                 <div class="bg-white py-8 rounded-xl w-80 flex flex-col items-center justify-center gap-4">
-                    <img class="h-44 object-contain" src="src/img/{product.tbl_product.product_img}" alt="">
-                    <h2 class="text-xl">{product.tbl_product.product_name}</h2>
-                    <p class="number text-lg">€ {product.tbl_product.pt_price}</p>
+                    <img class="h-44 object-contain" src="src/img/{product.product_img}" alt="">
+                    <h2 class="text-xl">{product.product_name}</h2>
 
-                    <!-- Accessing fields from related tables -->
-                    <p class="text-sm">Product Type: {product.tbl_type.type_field}</p>
+                    <!-- Access pt_price from the first object in tbl_product_type array -->
+                    {#if product.tbl_product_type}
+                        <p class="number text-lg">€ {product.tbl_product_type[0].pt_price}</p>
+                    {/if}
 
+                    <!-- <pre>{JSON.stringify(product, null, 2)}</pre> -->
                     <button class="bg-pink-400 mt-2 text-white py-3 px-10 tracking-wider border-2 border-pink-400 uppercase rounded-lg font-bold text-sm hover:bg-white hover:text-pink-400 ease-in-out duration-300">shopping cart</button>
                 </div>
             {/each}
-                <!-- <pre>{JSON.stringify(product, null, 2)}</pre> -->
                 
         </article>
     </section>
