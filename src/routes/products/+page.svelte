@@ -22,6 +22,7 @@
                     <!-- Access pt_price from the first object in tbl_product_type array -->
                     {#if product.tbl_product_type}
                         <p class="number text-lg">€ {product.tbl_product_type[0].pt_price}</p>
+                        
                         {#if product.tbl_product_type[0].tbl_type}
                             <p class="text-lg">{product.tbl_product_type[0].tbl_type.type}</p>
                         {/if}
