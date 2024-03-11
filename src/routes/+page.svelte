@@ -9,6 +9,7 @@
 </script>
 
 <Header />
+
 <main>
     <section class="min-h-dvh w-full flex justify-center items-center relative">
         <h1 class="uppercase font-black text-9xl tracking-wide z-10 text-white">Bubbley</h1>
