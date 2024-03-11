@@ -1,5 +1,5 @@
 <header class="absolute flex justify-between items-center z-10 top-0 w-full px-12 py-8">
-    <h1 class="uppercase text-white font-black tracking-wider text-2xl opacity-60">Bubbley</h1>
+    <h1 class="uppercase text-white font-black tracking-wider text-2xl opacity-60">typeshit</h1>
 
     <nav>
         <ul class="flex items-center gap-6">
