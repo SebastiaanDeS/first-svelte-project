@@ -15,17 +15,17 @@
 
         <article class="flex flex-wrap justify-center align-middle gap-14">
             {#each data.products as product}
-                <div class="bg-white py-8 rounded-xl w-80 flex flex-col items-center justify-center gap-4">
+                <div class="bg-white px-12 py-10 rounded-xl w-80 flex flex-col items-center gap-4">
+                    {#if product.tbl_product_type && product.tbl_product_type[0].tbl_type}                        
+                        <p class="self-start text-lg uppercase opacity-50">{product.tbl_product_type[0].tbl_type.type}</p>
+                    {/if}
+
                     <img class="h-44 object-contain" src="src/img/{product.product_img}" alt="">
                     <h2 class="text-xl">{product.product_name}</h2>
 
                     <!-- Access pt_price from the first object in tbl_product_type array -->
                     {#if product.tbl_product_type}
                         <p class="number text-lg">€ {product.tbl_product_type[0].pt_price}</p>
-                        
-                        {#if product.tbl_product_type[0].tbl_type}
-                            <p class="text-lg">{product.tbl_product_type[0].tbl_type.type}</p>
-                        {/if}
                     {/if}
 
 
